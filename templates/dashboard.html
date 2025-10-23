@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parking Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Parking Lot Dashboard</h1>
+    <p>Available Slots: {{ available }}</p>
+    <p>Occupied Slots: {{ occupied }}</p>
+    <a href="/checkin">Check-In Vehicle</a> | 
+    <a href="/checkout">Check-Out Vehicle</a> | 
+    <a href="/vehicles">View Vehicles</a>
+</body>
+</html>
