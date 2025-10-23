@@ -2,28 +2,23 @@
 <html>
 <head>
     <title>All Vehicles</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <h1>All Vehicles</h1>
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>License</th>
-            <th>Type</th>
-            <th>Slot</th>
-            <th>Check-In</th>
-            <th>Check-Out</th>
-            <th>Fee ($)</th>
+            <th>License Plate</th>
+            <th>Slot Number</th>
+            <th>Status</th>
         </tr>
-        {% for v in vehicles %}
+        {% for vehicle in vehicles %}
         <tr>
-            <td>{{ v[0] }}</td>
-            <td>{{ v[1] }}</td>
-            <td>{{ v[2] }}</td>
-            <td>{{ v[3] }}</td>
-            <td>{{ v[4] }}</td>
-            <td>{{ v[5] or '-' }}</td>
-            <td>{{ v[6] or '-' }}</td>
+            <td>{{ vehicle[0] }}</td>
+            <td>{{ vehicle[1] }}</td>
+            <td>{{ vehicle[2] }}</td>
+            <td>{{ vehicle[3] }}</td>
         </tr>
         {% endfor %}
     </table>
