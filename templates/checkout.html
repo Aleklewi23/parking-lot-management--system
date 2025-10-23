@@ -6,15 +6,22 @@
 </head>
 <body>
     <h1>Check-Out Vehicle</h1>
-    <form method="post">
-        <label for="vehicle_id">Select Vehicle:</label>
-        <select name="vehicle_id" required>
-            {% for vehicle in vehicles %}
-                <option value="{{ vehicle[0] }}">{{ vehicle[1] }} - Slot {{ vehicle[2] }}</option>
-            {% endfor %}
-        </select>
-        <input type="submit" value="Check-Out">
-    </form>
-    <a href="/">Back to Dashboard</a>
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/checkin">Check-In</a>
+        <a href="/checkout">Check-Out</a>
+        <a href="/vehicles">All Vehicles</a>
+    </nav>
+    <div style="text-align:center;">
+        <form method="post">
+            <label for="vehicle_id">Select Vehicle:</label><br>
+            <select name="vehicle_id" required>
+                {% for vehicle in vehicles %}
+                    <option value="{{ vehicle[0] }}">{{ vehicle[1] }} - Slot {{ vehicle[2] }}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type="submit" value="Check-Out">
+        </form>
+    </div>
 </body>
 </html>
