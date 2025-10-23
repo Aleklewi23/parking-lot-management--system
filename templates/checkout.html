@@ -2,13 +2,15 @@
 <html>
 <head>
     <title>Check-Out Vehicle</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <h1>Check-Out Vehicle</h1>
-    <form method="POST">
+    <form method="post">
+        <label for="vehicle_id">Select Vehicle:</label>
         <select name="vehicle_id" required>
-            {% for v in vehicles %}
-                <option value="{{ v[0] }}">{{ v[1] }}</option>
+            {% for vehicle in vehicles %}
+                <option value="{{ vehicle[0] }}">{{ vehicle[1] }} - Slot {{ vehicle[2] }}</option>
             {% endfor %}
         </select>
         <input type="submit" value="Check-Out">
