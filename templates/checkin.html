@@ -2,12 +2,13 @@
 <html>
 <head>
     <title>Check-In Vehicle</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <h1>Check-In Vehicle</h1>
-    <form method="POST">
-        License Plate: <input type="text" name="license" required><br>
-        Vehicle Type: <input type="text" name="type" required><br>
+    <form method="post">
+        License Plate: <input type="text" name="license_plate" required><br>
+        Slot Number: <input type="number" name="slot_number" required><br>
         <input type="submit" value="Check-In">
     </form>
     <a href="/">Back to Dashboard</a>
