@@ -1,5 +1,85 @@
-body { font-family: Arial, sans-serif; padding: 20px; }
-h1 { color: #2B4F81; }
-a { margin-right: 15px; }
-table { border-collapse: collapse; width: 100%; margin-top: 20px; }
-th, td { padding: 8px; text-align: left; border: 1px solid #ddd; }
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f; /* Dark blue */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #00264d; /* Slightly darker blue for header */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Navigation */
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #00bfff; /* Light blue links */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffdc00; /* Hover effect */
+}
+
+/* Dashboard Info Boxes */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.info-card {
+    background-color: #003366; /* Card color */
+    padding: 30px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    font-size: 20px;
+}
+
+.info-card h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+/* Buttons */
+button {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #009acd;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #00264d;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
