@@ -1,5 +1,57 @@
-body { font-family: Arial, sans-serif; padding: 20px; }
-h1 { color: #2B4F81; }
-a { margin-right: 15px; }
-table { border-collapse: collapse; width: 100%; margin-top: 20px; }
-th, td { padding: 8px; text-align: left; border: 1px solid #ddd; }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 60%;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 5px;
+    margin: 5px 0;
+    width: 200px;
+}
+
+input[type="submit"] {
+    padding: 5px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
