@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Parking Lot Dashboard</title>
+    <title>Check-Out Vehicle</title>
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
@@ -17,13 +17,16 @@
 
     <div class="dashboard-container">
         <div class="info-card">
-            <h2>Occupied Spots</h2>
-            <p>{{ occupied }}</p>
-        </div>
-
-        <div class="info-card">
-            <h2>Available Spots</h2>
-            <p>{{ available }}</p>
+            <h2>Check-Out Vehicle</h2>
+            <form method="post">
+                <label for="vehicle_id">Select Vehicle:</label><br><br>
+                <select name="vehicle_id" required>
+                    {% for vehicle in vehicles %}
+                        <option value="{{ vehicle[0] }}">{{ vehicle[1] }} - Slot {{ vehicle[2] }}</option>
+                    {% endfor %}
+                </select><br><br>
+                <button type="submit">Check-Out</button>
+            </form>
         </div>
     </div>
 
