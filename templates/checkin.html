@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Check-In Vehicle</title>
+    <title>Parking Lot Dashboard</title>
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>Check-In Vehicle</h1>
-    <nav>
-        <a href="/">Dashboard</a>
-        <a href="/checkin">Check-In</a>
-        <a href="/checkout">Check-Out</a>
-        <a href="/vehicles">All Vehicles</a>
-    </nav>
-    <div style="text-align:center;">
-        <form method="post">
-            <input type="text" name="license_plate" placeholder="License Plate" required><br>
-            <input type="number" name="slot_number" placeholder="Slot Number" required><br>
-            <input type="submit" value="Check-In">
-        </form>
+    <header>
+        <h1>Parking Lot Management</h1>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/checkin">Check-In</a>
+            <a href="/checkout">Check-Out</a>
+            <a href="/vehicles">All Vehicles</a>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="info-card">
+            <h2>Occupied Spots</h2>
+            <p>{{ occupied }}</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Available Spots</h2>
+            <p>{{ available }}</p>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2025 Parking Lot Management System
+    </footer>
 </body>
 </html>
