@@ -1,5 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    text-align: center;
-}
+body { font-family: Arial, sans-serif; padding: 20px; }
+h1 { color: #2B4F81; }
+a { margin-right: 15px; }
+table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+th, td { padding: 8px; text-align: left; border: 1px solid #ddd; }
