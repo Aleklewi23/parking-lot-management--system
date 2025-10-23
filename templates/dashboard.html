@@ -6,12 +6,15 @@
 </head>
 <body>
     <h1>Parking Lot Dashboard</h1>
-    <p>Occupied spots: {{ occupied }}</p>
-    <p>Available spots: {{ available }}</p>
     <nav>
-        <a href="/checkin">Check-In</a> |
-        <a href="/checkout">Check-Out</a> |
-        <a href="/vehicles">View Vehicles</a>
+        <a href="/">Dashboard</a>
+        <a href="/checkin">Check-In</a>
+        <a href="/checkout">Check-Out</a>
+        <a href="/vehicles">All Vehicles</a>
     </nav>
+    <div style="text-align:center;">
+        <p>Occupied spots: {{ occupied }}</p>
+        <p>Available spots: {{ available }}</p>
+    </div>
 </body>
 </html>
