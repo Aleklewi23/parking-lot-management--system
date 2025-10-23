@@ -6,22 +6,29 @@
 </head>
 <body>
     <h1>All Vehicles</h1>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>License Plate</th>
-            <th>Slot Number</th>
-            <th>Status</th>
-        </tr>
-        {% for vehicle in vehicles %}
-        <tr>
-            <td>{{ vehicle[0] }}</td>
-            <td>{{ vehicle[1] }}</td>
-            <td>{{ vehicle[2] }}</td>
-            <td>{{ vehicle[3] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    <a href="/">Back to Dashboard</a>
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/checkin">Check-In</a>
+        <a href="/checkout">Check-Out</a>
+        <a href="/vehicles">All Vehicles</a>
+    </nav>
+    <div style="text-align:center;">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>License Plate</th>
+                <th>Slot Number</th>
+                <th>Status</th>
+            </tr>
+            {% for vehicle in vehicles %}
+            <tr>
+                <td>{{ vehicle[0] }}</td>
+                <td>{{ vehicle[1] }}</td>
+                <td>{{ vehicle[2] }}</td>
+                <td>{{ vehicle[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </body>
 </html>
