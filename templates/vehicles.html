@@ -5,30 +5,40 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>All Vehicles</h1>
-    <nav>
-        <a href="/">Dashboard</a>
-        <a href="/checkin">Check-In</a>
-        <a href="/checkout">Check-Out</a>
-        <a href="/vehicles">All Vehicles</a>
-    </nav>
-    <div style="text-align:center;">
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>License Plate</th>
-                <th>Slot Number</th>
-                <th>Status</th>
-            </tr>
-            {% for vehicle in vehicles %}
-            <tr>
-                <td>{{ vehicle[0] }}</td>
-                <td>{{ vehicle[1] }}</td>
-                <td>{{ vehicle[2] }}</td>
-                <td>{{ vehicle[3] }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+    <header>
+        <h1>Parking Lot Management</h1>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/checkin">Check-In</a>
+            <a href="/checkout">Check-Out</a>
+            <a href="/vehicles">All Vehicles</a>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="info-card">
+            <h2>All Vehicles</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>License Plate</th>
+                    <th>Slot Number</th>
+                    <th>Status</th>
+                </tr>
+                {% for vehicle in vehicles %}
+                <tr>
+                    <td>{{ vehicle[0] }}</td>
+                    <td>{{ vehicle[1] }}</td>
+                    <td>{{ vehicle[2] }}</td>
+                    <td>{{ vehicle[3] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2025 Parking Lot Management System
+    </footer>
 </body>
 </html>
