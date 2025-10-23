@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Vehicles</title>
+</head>
+<body>
+    <h1>All Vehicles</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>License</th>
+            <th>Type</th>
+            <th>Slot</th>
+            <th>Check-In</th>
+            <th>Check-Out</th>
+            <th>Fee ($)</th>
+        </tr>
+        {% for v in vehicles %}
+        <tr>
+            <td>{{ v[0] }}</td>
+            <td>{{ v[1] }}</td>
+            <td>{{ v[2] }}</td>
+            <td>{{ v[3] }}</td>
+            <td>{{ v[4] }}</td>
+            <td>{{ v[5] or '-' }}</td>
+            <td>{{ v[6] or '-' }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>
